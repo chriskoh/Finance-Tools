@@ -14,7 +14,6 @@ def scrape(website): # Get web page data
 
     return data
 
-
 def get_data(parsed_html, returntype):
     soup    = parsed_html
     values  = []
@@ -58,33 +57,25 @@ def analyst_rating(ticker):
             detail = ''
             counter = 0
             tickers.append(str(var))
-#            print(str(var))
             for td in tds:
                 # return in table format
                 value = td.getText()
                 value.strip()
                 if counter == 0:
                     date.append(str(value))
-#                    print('0: date = ' + str(value))
                 elif counter == 1:
                     firm.append(str(value))
-#                    print('1: Research Firm = ' + str(value))
                 elif counter == 2:
                     action.append(str(value))
-#                    print('2: Action = ' + str(value))
                 elif counter == 3:
                     current.append(str(value))
-#                    print('3: Current = ' + str(value))
                 elif counter == 4:
                     pt.append(str(value))
-#                    print('4: PT = ' + str(value))
 
                 #save detail as long string
                 #detail += '(' + str(counter) + ') ' + str(value) + ' | '
 
                 counter += 1
-            #print(detail)
-#        print('-----------------------')
 
     return tickers, date, firm, action, current, pt
 
@@ -108,13 +99,9 @@ def main():
     print('Result: The following information has been pulled from NASDAQ')
 
     for earn_tick, earn_time in zip(tickers, time):
-        print(earn_tick + ' --- ' + earn_time)
-        print('Date | Research Firm | Action | Current | PT')
         for detail_tick, detail_date, detail_firm, detail_action, detail_current, detail_pt in zip(det_tick, det_date, det_firm, det_action, det_current, det_pt):
             if(earn_tick == detail_tick):
                 print(detail_date + ' | ' + detail_firm + ' | ' + detail_action + ' | ' + detail_current + ' | ' + detail_pt)
-        print('--------------------')
-
 
 if __name__ == '__main__':
    main()       
