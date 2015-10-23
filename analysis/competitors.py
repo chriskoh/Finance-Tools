@@ -66,28 +66,20 @@ def comp(ticker):
                 value.strip()
                 if counter == 0:
                     compname.append(value)
-#                    print('Name: ' + value)                   
                 elif counter == 1:
                     lastsale.append(value)
-#                    print('LastSale: ' + value)
                 elif counter == 2:
                     netchange.append(value)
-#                    print('NetChange: ' + value)
                 elif counter == 3:
                     volume.append(value)
-#                    print('Volume: ' + value)
                 elif counter == 4:
                     highlow.append(value)
-#                    print('Todays High / Low: ' + value)
                 elif counter == 5:
                     highlow2.append(value)
-#                    print('52 Week High / Low: ' + value)
                 elif counter == 6:
                     peratio.append(value)
-#                    print('P/E Ratio: ' + value)
                 elif counter == 7:
                     cap.append(value)
-#                    print('Market Cap: ' + value)
 
                 counter += 1
 
@@ -112,14 +104,6 @@ def main():
     det_tick, det_name, det_lsale, det_change, det_volume, det_highlow, det_highlow2, det_per, det_cap = comp(tickers)
 
     print('Result: The following information has been pulled from NASDAQ')
-
-    for earn_tick, earn_time in zip(tickers, time):
-        print(earn_tick + ' --- ' + earn_time)
-        print('Company Name | Last Sale | Net Change | Volume | Today"s high / low | 52 Week high / low | P/E Ratio | Market Cap')
-        for detail_tick, detail_name, detail_lsale, detail_change, detail_volume, detail_highlow, detail_highlow2, detail_per, detail_cap in zip(det_tick, det_name, det_lsale, det_change, det_volume, det_highlow, det_highlow2, det_per, det_cap):
-            if(earn_tick == detail_tick):
-                print(detail_name + ' | ' + detail_lsale + ' | ' +  detail_change + ' | ' + detail_volume + ' | ' + detail_highlow + ' | ' + detail_highlow2 + ' | ' + detail_per + ' | ' + detail_cap)
-        print('--------------------')
 
 
 if __name__ == '__main__':
