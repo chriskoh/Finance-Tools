@@ -1,8 +1,8 @@
-Stock Analysis Tools
+# Stock Analysis Tools
 
 Pull stock information on today's Earnings Calendar, and retrieve: Stock information (historical / current), Analyst Ratings and competitors information.
 
-Tools
+# Tools
 
 Analysts Raitings:
 
@@ -14,6 +14,6 @@ Historical:
 
 Stock Report:
 
-Graphs:
+# Graphs:
 
 Candle Stick
