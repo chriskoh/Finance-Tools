@@ -5,16 +5,16 @@ Pull stock information on today's Earnings Calendar, and retrieve: Stock informa
 # Tools
 Analyze the below categories for all tickers found on the NASDAQ daily earnings calendar.
 
-  •Analysts Raitings
+  • Analysts Raitings
   
-  •Competitors
+  • Competitors
   
-  •Earnigns Summary
+  • Earnigns Summary
   
-  •Historical
+  • Historical
   
-  •Stock Report
+  • Stock Report
 
 # Graphs:
 
-  •Candle Stick
+  • Candle Stick
